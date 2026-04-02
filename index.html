@@ -77,65 +77,16 @@ border-bottom: 1px solid var(--panel-border);
 background: rgba(7,12,24,0.9);
 backdrop-filter: blur(8px);
 }
-
-.topbar-left {
-display: flex;
-align-items: center;
-gap: 16px;
-}
-
-.brand {
-font-family: 'Orbitron', monospace;
-font-size: 13px;
-font-weight: 900;
-color: var(--blue);
-letter-spacing: 0.08em;
-text-shadow: 0 0 20px rgba(0,191,255,0.4);
-}
+.topbar-left { display: flex; align-items: center; gap: 16px; }
+.brand { font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 900; color: var(--blue); letter-spacing: 0.08em; text-shadow: 0 0 20px rgba(0,191,255,0.4); }
 .brand sup { font-size: 0.6em; vertical-align: super; }
-
-.topbar-divider {
-width: 1px; height: 20px;
-background: var(--muted2);
-}
-
-.topbar-label {
-font-family: 'Share Tech Mono', monospace;
-font-size: 10px;
-letter-spacing: 0.25em;
-color: var(--muted);
-text-transform: uppercase;
-}
-
-.topbar-right {
-display: flex;
-align-items: center;
-gap: 20px;
-}
-
-.sys-status {
-display: flex;
-align-items: center;
-gap: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 9px;
-letter-spacing: 0.2em;
-color: var(--green);
-}
-.status-dot {
-width: 6px; height: 6px;
-border-radius: 50%;
-background: var(--green);
-animation: blink 2s ease-in-out infinite;
-}
+.topbar-divider { width: 1px; height: 20px; background: var(--muted2); }
+.topbar-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase; }
+.topbar-right { display: flex; align-items: center; gap: 20px; }
+.sys-status { display: flex; align-items: center; gap: 6px; font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--green); }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 2s ease-in-out infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
-
-.clock {
-font-family: 'Share Tech Mono', monospace;
-font-size: 11px;
-color: var(--muted);
-letter-spacing: 0.1em;
-}
+.clock { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
 
 .left-panel {
 border-right: 1px solid var(--panel-border);
@@ -183,343 +134,124 @@ background: linear-gradient(90deg, transparent, var(--blue), transparent);
 opacity: 0.4;
 }
 
-.section-label {
-font-family: 'Share Tech Mono', monospace;
-font-size: 8px;
-letter-spacing: 0.3em;
-color: var(--muted);text-transform: uppercase;
-margin-bottom: 10px;
-}
+.section-label { font-family: 'Share Tech Mono', monospace; font-size: 8px; letter-spacing: 0.3em; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+.revenue-numbers { display: flex; align-items: baseline; gap: 4px; margin: 4px 0 8px; }
+.revenue-current { font-family: 'Orbitron', monospace; font-size: 22px; font-weight: 700; color: var(--blue); }
+.revenue-target { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--muted); }
+.progress-track { height: 4px; background: var(--muted2); border-radius: 2px; overflow: hidden; margin-bottom: 6px; }
+.progress-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--blue-dim), var(--blue)); box-shadow: 0 0 8px var(--blue); width: 0%; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.progress-pct { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: var(--accent); text-align: right; }
 
-.revenue-block {}
-.revenue-numbers {
-display: flex;
-align-items: baseline;
-gap: 4px;
-margin: 4px 0 8px;
-}
-.revenue-current {
-font-family: 'Orbitron', monospace;
-font-size: 22px;
-font-weight: 700;
-color: var(--blue);
-}
-.revenue-target {
-font-family: 'Share Tech Mono', monospace;
-font-size: 10px;
-color: var(--muted);
-}
-.progress-track {
-height: 4px;
-background: var(--muted2);
-border-radius: 2px;
-overflow: hidden;
-margin-bottom: 6px;
-}
-.progress-fill {
-height: 100%;
-border-radius: 2px;
-background: linear-gradient(90deg, var(--blue-dim), var(--blue));
-box-shadow: 0 0 8px var(--blue);
-width: 0%;
-transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.progress-pct {
-font-family: 'Share Tech Mono', monospace;
-font-size: 9px;
-color: var(--accent);
-text-align: right;
-}
-
-.stat-row {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 5px 0;
-border-bottom: 1px solid var(--muted2);
-}
+.stat-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--muted2); }
 .stat-row:last-child { border-bottom: none; }
-.stat-label {
-font-size: 11px;
-color: var(--muted);
-letter-spacing: 0.05em;
-}
-.stat-value {
-font-family: 'Share Tech Mono', monospace;
-font-size: 11px;
-color: var(--white);
-}
+.stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+.stat-value { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--white); }
 .stat-value.green { color: var(--green); }
 .stat-value.orange { color: var(--orange); }
 .stat-value.blue { color: var(--blue); }
 
-.feed-item {
-display: flex;
-gap: 8px;
-padding: 6px 0;
-border-bottom: 1px solid var(--muted2);
-align-items: flex-start;
-}
+.feed-item { display: flex; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--muted2); align-items: flex-start; }
 .feed-item:last-child { border-bottom: none; }
-.feed-agent {
-font-family: 'Orbitron', monospace;
-font-size: 8px;
-font-weight: 700;
-color: var(--blue);
-letter-spacing: 0.05em;
-white-space: nowrap;
-min-width: 44px;
-padding-top: 1px;
-}
-.feed-text {
-font-size: 10px;
-color: var(--muted);
-line-height: 1.4;
-}
-.feed-time {
-font-family: 'Share Tech Mono', monospace;
-font-size: 8px;
-color: var(--muted2);
-white-space: nowrap;
-margin-left: auto;
-padding-top: 1px;
-}
+.feed-agent { font-family: 'Orbitron', monospace; font-size: 8px; font-weight: 700; color: var(--blue); letter-spacing: 0.05em; white-space: nowrap; min-width: 44px; padding-top: 1px; }
+.feed-text { font-size: 10px; color: var(--muted); line-height: 1.4; }
+.feed-time { font-family: 'Share Tech Mono', monospace; font-size: 8px; color: var(--muted2); white-space: nowrap; margin-left: auto; padding-top: 1px; }
 
-.action-item {
-display: flex;
-gap: 8px;
-padding: 5px 0;
-border-bottom: 1px solid var(--muted2);
-align-items: center;
-}
+.action-item { display: flex; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--muted2); align-items: center; }
 .action-item:last-child { border-bottom: none; }
-.action-dot {
-width: 5px; height: 5px;
-border-radius: 50%;
-background: var(--orange);
-flex-shrink: 0;
-margin-top: 1px;
-}
+.action-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 1px; }
 .action-dot.blue { background: var(--blue); }
-.action-text {
-font-size: 10px;
-color: var(--muted);
-line-height: 1.4;
-}
+.action-text { font-size: 10px; color: var(--muted); line-height: 1.4; }
 
-.pipeline-item {
-padding: 6px 0;
-border-bottom: 1px solid var(--muted2);
-}
+.pipeline-item { padding: 6px 0; border-bottom: 1px solid var(--muted2); }
 .pipeline-item:last-child { border-bottom: none; }
-.pipeline-name {
-font-size: 11px;
-color: var(--white);
-margin-bottom: 3px;
-}
-.pipeline-meta {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.pipeline-stage {
-font-family: 'Share Tech Mono', monospace;
-font-size: 8px;
-letter-spacing: 0.1em;
-padding: 2px 6px;
-border-radius: 2px;
-}
+.pipeline-name { font-size: 11px; color: var(--white); margin-bottom: 3px; }
+.pipeline-meta { display: flex; justify-content: space-between; align-items: center; }
+.pipeline-stage { font-family: 'Share Tech Mono', monospace; font-size: 8px; letter-spacing: 0.1em; padding: 2px 6px; border-radius: 2px; }
 .stage-review { color: var(--orange); background: var(--orange-dim); }
 .stage-submitted { color: var(--blue); background: var(--blue-faint); }
 .stage-awarded { color: var(--green); background: var(--green-dim); }
-.pipeline-value {
-font-family: 'Share Tech Mono', monospace;
-font-size: 9px;
-color: var(--muted);
-}
+.pipeline-value { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: var(--muted); }
 
-.topology-wrap {
-position: relative;
-width: 100%;
-max-width: 560px;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+.bid-decision-item { padding: 8px 0; border-bottom: 1px solid var(--muted2); }
+.bid-decision-item:last-child { border-bottom: none; }
+.bid-decision-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+.bid-decision-name { font-size: 11px; color: var(--white); line-height: 1.3; max-width: 110px; }
+.bid-rec { font-family: 'Share Tech Mono', monospace; font-size: 8px; letter-spacing: 0.1em; padding: 2px 6px; border-radius: 2px; white-space: nowrap; }
+.rec-pursue { color: var(--green); background: var(--green-dim); border: 1px solid rgba(0,255,136,0.2); }
+.rec-pass { color: var(--red); background: rgba(255,51,85,0.1); border: 1px solid rgba(255,51,85,0.2); }
+.rec-review { color: var(--orange); background: var(--orange-dim); border: 1px solid rgba(255,123,0,0.2); }
+.bid-decision-meta { display: flex; justify-content: space-between; align-items: center; }
+.bid-deadline { font-family: 'Share Tech Mono', monospace; font-size: 8px; color: var(--muted); }
+.bid-deadline.urgent { color: var(--red); }
+.bid-flag { font-family: 'Share Tech Mono', monospace; font-size: 7px; letter-spacing: 0.1em; color: var(--orange); display: flex; align-items: center; gap: 3px; }
+.bid-flag::before { content: '▲'; font-size: 6px; }
 
-.topo-title {
-font-family: 'Share Tech Mono', monospace;
-font-size: 9px;
-letter-spacing: 0.3em;
-color: var(--muted);
-margin-bottom: 20px;
-text-transform: uppercase;
-}
+.hvb-item { padding: 7px 0; border-bottom: 1px solid var(--muted2); }
+.hvb-item:last-child { border-bottom: none; }
+.hvb-name { font-size: 10px; color: var(--white); margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hvb-bars { display: flex; flex-direction: column; gap: 3px; }
+.hvb-bar-row { display: flex; align-items: center; gap: 6px; }
+.hvb-bar-label { font-family: 'Share Tech Mono', monospace; font-size: 7px; color: var(--muted); width: 24px; text-align: right; flex-shrink: 0; }
+.hvb-track { flex: 1; height: 4px; background: var(--muted2); border-radius: 2px; overflow: visible; position: relative; }
+.hvb-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+.hvb-fill.bid-fill { background: var(--blue-dim); }
+.hvb-fill.actual-fill { background: var(--green); box-shadow: 0 0 6px rgba(0,255,136,0.4); }
+.hvb-fill.actual-over { background: var(--red); box-shadow: 0 0 6px rgba(255,51,85,0.4); }
+.hvb-bar-val { font-family: 'Share Tech Mono', monospace; font-size: 7px; color: var(--muted); width: 22px; flex-shrink: 0; }
+.hvb-delta { margin-top: 4px; font-family: 'Share Tech Mono', monospace; font-size: 8px; text-align: right; }
+.hvb-delta.under { color: var(--green); }
+.hvb-delta.over { color: var(--red); }
 
-svg#topo-svg {
-position: absolute;
-top: 0; left: 0;
-width: 100%; height: 100%;
-pointer-events: none;
-overflow: visible;
-z-index: 0;
-}
-
-.topo-rows {
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0;
-position: relative;
-z-index: 1;
-}
-
-.topo-paul-row,
-.topo-naomi-row,
-.topo-subs-row {
-display: flex;
-justify-content: center;
-width: 100%;
-}
-
+/* ─── TOPOLOGY ─── */
+.topology-wrap { position: relative; width: 100%; max-width: 560px; display: flex; flex-direction: column; align-items: center; }
+.topo-title { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--muted); margin-bottom: 20px; text-transform: uppercase; }
+svg#topo-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 0; }
+.topo-rows { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0; position: relative; z-index: 1; }
+.topo-paul-row, .topo-naomi-row, .topo-subs-row { display: flex; justify-content: center; width: 100%; }
 .topo-paul-row { margin-bottom: 36px; }
 .topo-naomi-row { margin-bottom: 36px; }
 
-.a-card {
-background: var(--panel);
-border: 1px solid var(--line);
-border-radius: 3px;
-padding: 12px 14px;
-position: relative;cursor: pointer;
-transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
-user-select: none;
-}
-.a-card:hover {
-border-color: var(--blue);
-box-shadow: 0 0 20px var(--blue-glow);
-transform: translateY(-2px);
-}
+/* ─── AGENT CARDS ─── */
+.a-card { background: var(--panel); border: 1px solid var(--line); border-radius: 3px; padding: 12px 14px; position: relative; cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s; user-select: none; }
+.a-card:hover { border-color: var(--blue); box-shadow: 0 0 20px var(--blue-glow); transform: translateY(-2px); }
 .a-card .c { position: absolute; width: 7px; height: 7px; border-color: var(--blue); border-style: solid; opacity: 0.5; }
 .a-card .c.tl { top:-1px; left:-1px; border-width: 1.5px 0 0 1.5px; }
 .a-card .c.tr { top:-1px; right:-1px; border-width: 1.5px 1.5px 0 0; }
 .a-card .c.bl { bottom:-1px; left:-1px; border-width: 0 0 1.5px 1.5px; }
 .a-card .c.br { bottom:-1px; right:-1px; border-width: 0 1.5px 1.5px 0; }
-
-.a-tag {
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-letter-spacing: 0.25em;
-color: var(--muted);
-text-transform: uppercase;
-margin-bottom: 2px;
-}
-.a-name {
-font-family: 'Orbitron', monospace;
-font-weight: 700;
-color: var(--blue);
-letter-spacing: 0.06em;
-line-height: 1;
-}
-.a-role {
-font-size: 9px;
-color: var(--muted);
-letter-spacing: 0.08em;
-margin-top: 2px;
-font-family: 'Share Tech Mono', monospace;
-}
-.a-model {
-margin-top: 6px;
-display: inline-block;
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-letter-spacing: 0.12em;
-color: var(--accent);
-background: var(--accent-dim);
-border: 1px solid rgba(0,255,204,0.18);
-border-radius: 2px;
-padding: 1px 6px;
-}
-.a-status {
-display: flex;
-align-items: center;
-gap: 4px;
-margin-top: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-letter-spacing: 0.12em;
-}
-.a-status-dot {
-width: 5px; height: 5px;
-border-radius: 50%;
-}
+.a-tag { font-family: 'Share Tech Mono', monospace; font-size: 7px; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase; margin-bottom: 2px; }
+.a-name { font-family: 'Orbitron', monospace; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; line-height: 1; }
+.a-role { font-size: 9px; color: var(--muted); letter-spacing: 0.08em; margin-top: 2px; font-family: 'Share Tech Mono', monospace; }
+.a-model { margin-top: 6px; display: inline-block; font-family: 'Share Tech Mono', monospace; font-size: 7px; letter-spacing: 0.12em; color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,255,204,0.18); border-radius: 2px; padding: 1px 6px; }
+.a-status { display: flex; align-items: center; gap: 4px; margin-top: 6px; font-family: 'Share Tech Mono', monospace; font-size: 7px; letter-spacing: 0.12em; }
+.a-status-dot { width: 5px; height: 5px; border-radius: 50%; }
 .status-online .a-status-dot { background: var(--green); animation: blink 2s infinite; }
 .status-online .a-status-txt { color: var(--green); }
 .status-idle .a-status-dot { background: var(--muted); }
 .status-idle .a-status-txt { color: var(--muted); }
 
-.paul-card {
-width: 160px;
-border-color: rgba(255,123,0,0.35);
-}
+.paul-card { width: 160px; border-color: rgba(255,123,0,0.35); }
 .paul-card:hover { border-color: var(--orange); box-shadow: 0 0 20px var(--orange-dim); }
 .paul-card .c { border-color: var(--orange); }
 .paul-card .a-name { font-size: 16px; color: var(--orange); }
-.paul-tele {
-display: flex; align-items: center; gap: 5px;
-margin-top: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px; letter-spacing: 0.15em; color: var(--orange);
-}
+.paul-tele { display: flex; align-items: center; gap: 5px; margin-top: 6px; font-family: 'Share Tech Mono', monospace; font-size: 7px; letter-spacing: 0.15em; color: var(--orange); }
 .paul-tele-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); animation: blink 1.4s infinite; }
 
-.naomi-card {
-width: 210px;
-border-color: var(--blue);
-box-shadow: 0 0 30px rgba(0,191,255,0.1);
-}
+.naomi-card { width: 210px; border-color: var(--blue); box-shadow: 0 0 30px rgba(0,191,255,0.1); }
 .naomi-card .a-name { font-size: 24px; }
-.naomi-pulse {
-position: absolute;
-inset: -10px;
-border: 1px solid rgba(0,191,255,0.15);
-border-radius: 5px;
-animation: pulse-ring 3s ease-in-out infinite;
-pointer-events: none;
-}
+.naomi-pulse { position: absolute; inset: -10px; border: 1px solid rgba(0,191,255,0.15); border-radius: 5px; animation: pulse-ring 3s ease-in-out infinite; pointer-events: none; }
 .naomi-pulse:nth-child(2) { inset: -18px; animation-delay: 1.2s; }
-@keyframes pulse-ring {
-0%,100%{opacity:0.5;transform:scale(1)}
-50%{opacity:0.1;transform:scale(1.015)}
-}
+@keyframes pulse-ring { 0%,100%{opacity:0.5;transform:scale(1)} 50%{opacity:0.1;transform:scale(1.015)} }
 
 .sub-card { width: 108px; }
 .sub-card .a-name { font-size: 14px; }
 .topo-subs-row { gap: 10px; flex-wrap: wrap; }
 
-.agent-detail {
-transition: opacity 0.2s;
-}
-.detail-name {
-font-family: 'Orbitron', monospace;
-font-size: 18px;
-font-weight: 700;
-color: var(--blue);
-margin-bottom: 2px;
-}
-.detail-role {
-font-family: 'Share Tech Mono', monospace;
-font-size: 9px;
-color: var(--muted);
-letter-spacing: 0.15em;
-margin-bottom: 10px;
-}
-.detail-row {
-display: flex; justify-content: space-between;
-padding: 4px 0;
-border-bottom: 1px solid var(--muted2);
-font-size: 10px;
-}
+/* ─── AGENT DETAIL (right panel) ─── */
+.agent-detail { transition: opacity 0.2s; }
+.detail-name { font-family: 'Orbitron', monospace; font-size: 18px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.detail-role { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.15em; margin-bottom: 10px; }
+.detail-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--muted2); font-size: 10px; }
 .detail-row:last-child { border-bottom: none; }
 .detail-k { color: var(--muted); }
 .detail-v { font-family: 'Share Tech Mono', monospace; color: var(--white); font-size: 9px; }
@@ -527,125 +259,229 @@ font-size: 10px;
 .detail-v.orange { color: var(--orange); }
 .detail-v.blue { color: var(--blue); }
 
-.bid-decision-item {
-padding: 8px 0;
-border-bottom: 1px solid var(--muted2);
-}
-.bid-decision-item:last-child { border-bottom: none; }
-.bid-decision-top {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-margin-bottom: 4px;
-}
-.bid-decision-name {font-size: 11px;
-color: var(--white);
-line-height: 1.3;
-max-width: 110px;
-}
-.bid-rec {
-font-family: 'Share Tech Mono', monospace;
-font-size: 8px;
-letter-spacing: 0.1em;
-padding: 2px 6px;
-border-radius: 2px;
-white-space: nowrap;
-}
-.rec-pursue { color: var(--green); background: var(--green-dim); border: 1px solid rgba(0,255,136,0.2); }
-.rec-pass { color: var(--red); background: rgba(255,51,85,0.1); border: 1px solid rgba(255,51,85,0.2); }
-.rec-review { color: var(--orange); background: var(--orange-dim); border: 1px solid rgba(255,123,0,0.2); }
-.bid-decision-meta {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.bid-deadline {
-font-family: 'Share Tech Mono', monospace;
-font-size: 8px;
-color: var(--muted);
-}
-.bid-deadline.urgent { color: var(--red); }
-.bid-flag {
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-letter-spacing: 0.1em;
-color: var(--orange);
+.panel-section.clickable { cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
+.panel-section.clickable:hover { border-color: rgba(0,191,255,0.5); box-shadow: 0 0 16px rgba(0,191,255,0.08); }
+.panel-section.clickable:hover .section-label { color: var(--blue); }
+
+/* ─── MODAL ─── */
+.modal-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(4,7,14,0.85);
+backdrop-filter: blur(4px);
+z-index: 1000;
 display: flex;
 align-items: center;
-gap: 3px;
+justify-content: center;
+padding: 20px;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.25s ease;
 }
-.bid-flag::before {
-content: '▲';
-font-size: 6px;
+.modal-backdrop.open {
+opacity: 1;
+pointer-events: all;
 }
 
-.hvb-item {
-padding: 7px 0;
-border-bottom: 1px solid var(--muted2);
+.modal {
+background: var(--panel);
+border: 1px solid var(--blue);
+border-radius: 4px;
+width: 100%;
+max-width: 580px;
+position: relative;
+transform: translateY(16px);
+transition: transform 0.3s cubic-bezier(0.2, 0, 0.1, 1);
+box-shadow: 0 0 60px rgba(0,191,255,0.12), 0 0 120px rgba(0,191,255,0.05);
 }
-.hvb-item:last-child { border-bottom: none; }
-.hvb-name {
-font-size: 10px;
-color: var(--white);
-margin-bottom: 5px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+.modal-backdrop.open .modal {
+transform: translateY(0);
 }
-.hvb-bars {
+
+.modal::before, .modal::after,
+.modal-inner::before, .modal-inner::after {
+content: '';
+position: absolute;
+width: 10px; height: 10px;
+border-color: var(--blue);
+border-style: solid;
+opacity: 0.7;
+}
+.modal::before { top:-1px; left:-1px; border-width: 2px 0 0 2px; }
+.modal::after { top:-1px; right:-1px; border-width: 2px 2px 0 0; }
+.modal-inner::before { bottom:-1px; left:-1px; border-width: 0 0 2px 2px; }
+.modal-inner::after { bottom:-1px; right:-1px; border-width: 0 2px 2px 0; }
+.modal-inner { position: absolute; inset: 0; pointer-events: none; }
+
+.modal-topbar-glow {
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(--blue), transparent);
+opacity: 0.6;
+}
+
+.modal-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+padding: 20px 22px 16px;
+border-bottom: 1px solid var(--line);
+}
+
+.modal-agent-id {
 display: flex;
 flex-direction: column;
-gap: 3px;
+gap: 4px;
 }
-.hvb-bar-row {
+
+.modal-tag {
+font-family: 'Share Tech Mono', monospace;
+font-size: 8px;
+letter-spacing: 0.3em;
+color: var(--muted);
+text-transform: uppercase;
+}
+
+.modal-name {
+font-family: 'Orbitron', monospace;
+font-size: 32px;
+font-weight: 900;
+color: var(--blue);
+letter-spacing: 0.06em;
+line-height: 1;
+text-shadow: 0 0 24px rgba(0,191,255,0.35);
+}
+.modal-name.orange { color: var(--orange); text-shadow: 0 0 24px rgba(255,123,0,0.35); }
+
+.modal-role {
+font-family: 'Rajdhani', sans-serif;
+font-size: 13px;
+font-weight: 500;
+color: var(--muted);
+letter-spacing: 0.1em;
+margin-top: 4px;
+}
+
+.modal-status-badge {
 display: flex;
 align-items: center;
 gap: 6px;
-}
-.hvb-bar-label {
 font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-color: var(--muted);
-width: 24px;
-text-align: right;
-flex-shrink: 0;
-}
-.hvb-track {
-flex: 1;
-height: 4px;
-background: var(--muted2);
+font-size: 9px;
+letter-spacing: 0.15em;
+padding: 5px 10px;
 border-radius: 2px;
-overflow: visible;
-position: relative;
-}
-.hvb-fill {
-height: 100%;
-border-radius: 2px;
-transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
-}
-.hvb-fill.bid-fill { background: var(--blue-dim); }
-.hvb-fill.actual-fill { background: var(--green); box-shadow: 0 0 6px rgba(0,255,136,0.4); }
-.hvb-fill.actual-over { background: var(--red); box-shadow: 0 0 6px rgba(255,51,85,0.4); }
-.hvb-bar-val {
-font-family: 'Share Tech Mono', monospace;
-font-size: 7px;
-color: var(--muted);
-width: 22px;
-flex-shrink: 0;
-}
-.hvb-delta {
+border: 1px solid;
 margin-top: 4px;
+}
+.modal-status-badge.online { color: var(--green); border-color: rgba(0,255,136,0.3); background: var(--green-dim); }
+.modal-status-badge.online .modal-status-dot { background: var(--green); animation: blink 2s infinite; }
+.modal-status-badge.idle { color: var(--muted); border-color: var(--muted2); background: transparent; }
+.modal-status-badge.idle .modal-status-dot { background: var(--muted); }
+.modal-status-badge.active { color: var(--orange); border-color: rgba(255,123,0,0.3); background: var(--orange-dim); }
+.modal-status-badge.active .modal-status-dot { background: var(--orange); animation: blink 1.4s infinite; }
+.modal-status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+.modal-close {
+background: none;
+border: 1px solid var(--muted2);
+color: var(--muted);
+width: 28px; height: 28px;
+border-radius: 2px;
+cursor: pointer;
+font-family: 'Share Tech Mono', monospace;
+font-size: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: border-color 0.2s, color 0.2s;
+flex-shrink: 0;
+margin-left: 12px;
+margin-top: 2px;
+}
+.modal-close:hover { border-color: var(--blue); color: var(--blue); }
+
+.modal-body {
+padding: 18px 22px 22px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px 24px;
+}
+
+.modal-field {
+padding: 10px 0;
+border-bottom: 1px solid var(--muted2);
+}
+.modal-field.full-width {
+grid-column: 1 / -1;
+}
+.modal-field-label {
 font-family: 'Share Tech Mono', monospace;
 font-size: 8px;
-text-align: right;
+letter-spacing: 0.25em;
+color: var(--muted);
+text-transform: uppercase;
+margin-bottom: 6px;
 }
-.hvb-delta.under { color: var(--green); }
-.hvb-delta.over { color: var(--red); }
+.modal-field-value {
+font-family: 'Rajdhani', sans-serif;
+font-size: 15px;
+font-weight: 600;
+color: var(--white);
+letter-spacing: 0.03em;
+line-height: 1.4;
+}
+.modal-field-value.blue { color: var(--blue); }
+.modal-field-value.green { color: var(--green); }
+.modal-field-value.orange { color: var(--orange); }
+.modal-field-value.accent { color: var(--accent); }
+.modal-field-value.muted {
+font-family: 'Rajdhani', sans-serif;
+font-size: 13px;
+font-weight: 400;
+color: var(--muted);
+line-height: 1.6;
+}
 
+.modal-model-badge {
+display: inline-block;
+font-family: 'Share Tech Mono', monospace;
+font-size: 10px;
+letter-spacing: 0.1em;
+color: var(--accent);
+background: var(--accent-dim);
+border: 1px solid rgba(0,255,204,0.2);
+border-radius: 2px;
+padding: 2px 8px;
+}
+
+.modal-footer {
+padding: 10px 22px 16px;
+border-top: 1px solid var(--line);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.modal-footer-note {
+font-family: 'Share Tech Mono', monospace;
+font-size: 8px;
+letter-spacing: 0.15em;
+color: var(--muted2);
+}
+.modal-footer-tag {
+font-family: 'Share Tech Mono', monospace;
+font-size: 8px;
+letter-spacing: 0.2em;
+color: var(--muted2);
+}
+
+/* ─── SCROLLBARS ─── */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 2px; }
 
+/* ─── ANIMATIONS ─── */
 .a-card { animation: fadeUp 0.4s ease both; }
 .paul-card { animation-delay: 0.05s; }
 .naomi-card { animation-delay: 0.15s; }
@@ -656,7 +492,6 @@ text-align: right;
 .sub-card:nth-child(5){animation-delay:0.42s}
 .panel-section { animation: fadeUp 0.5s ease both; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
-
 @keyframes drawLine { to { stroke-dashoffset: 0; } }
 
 .a-card:hover::after {
@@ -678,477 +513,504 @@ pointer-events: none;
 z-index: 100;
 }
 
-@media (max-width: 900px) {
-.mc-shell { grid-template-columns: 180px 1fr 180px; }
-}
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) { .mc-shell { grid-template-columns: 180px 1fr 180px; } }
 @media (max-width: 720px) {
 .mc-shell { grid-template-columns: 1fr; grid-template-rows: 52px auto auto auto; overflow-y: auto; }
 html, body { overflow: auto; }
 .left-panel, .right-panel { border: none; border-bottom: 1px solid var(--panel-border); }
 .center-panel { min-height: 480px; }
+.modal { max-width: 100%; }
+.modal-body { grid-template-columns: 1fr; }
+.modal-name { font-size: 26px; }
 }
 </style>
-
 </head>
 <body>
 
+<!-- ─── PANEL MODAL ─── -->
+<div class="modal-backdrop" id="panel-modal">
+ <div class="modal" id="panel-modal-box">
+ <div class="modal-topbar-glow"></div>
+ <div class="modal-inner"></div>
+ <div class="modal-header">
+ <div class="modal-agent-id">
+ <div class="modal-tag" id="pm-tag">// Panel</div>
+ <div class="modal-name" id="pm-name" style="font-size:22px;">REVENUE TRACKER</div>
+ <div class="modal-role" id="pm-subtitle"></div>
+ </div>
+ <button class="modal-close" id="panel-modal-close" aria-label="Close">&#x2715;</button>
+ </div>
+ <div class="modal-body" id="pm-body"></div>
+ <div class="modal-footer">
+ <div class="modal-footer-note">SKINNY WIRE&reg; MISSION CONTROL</div>
+ <div class="modal-footer-tag">ESC OR CLICK OUTSIDE TO CLOSE</div>
+ </div>
+ </div>
+</div>
+
+<!-- ─── AGENT MODAL ─── -->
+<div class="modal-backdrop" id="agent-modal" role="dialog" aria-modal="true">
+ <div class="modal" id="modal-box">
+ <div class="modal-topbar-glow"></div>
+ <div class="modal-inner"></div>
+ <div class="modal-header">
+ <div class="modal-agent-id">
+ <div class="modal-tag" id="m-tag">// Primary Hub</div>
+ <div class="modal-name" id="m-name">NAOMI</div>
+ <div class="modal-role" id="m-role">CHIEF OF STAFF // PRIMARY HUB</div>
+ <div class="modal-status-badge online" id="m-status-badge">
+ <div class="modal-status-dot"></div>
+ <span id="m-status-txt">ONLINE</span>
+ </div>
+ </div>
+ <button class="modal-close" id="modal-close" aria-label="Close">&#x2715;</button>
+ </div>
+ <div class="modal-body">
+ <div class="modal-field">
+ <div class="modal-field-label">Model</div>
+ <div class="modal-field-value accent"><span class="modal-model-badge" id="m-model">Claude Sonnet</span></div>
+ </div>
+ <div class="modal-field">
+ <div class="modal-field-label">Channel</div>
+ <div class="modal-field-value blue" id="m-channel">Telegram</div>
+ </div>
+ <div class="modal-field">
+ <div class="modal-field-label">Lane</div>
+ <div class="modal-field-value" id="m-lane">Ops Orchestration</div>
+ </div>
+ <div class="modal-field">
+ <div class="modal-field-label">Sessions</div>
+ <div class="modal-field-value" id="m-sessions">Active</div>
+ </div>
+ <div class="modal-field full-width">
+ <div class="modal-field-label">Notes</div>
+ <div class="modal-field-value muted" id="m-notes">Single operational touchpoint. Routes all tasks, manages context, and coordinates sub-agents.</div>
+ </div>
+ </div>
+ <div class="modal-footer">
+ <div class="modal-footer-note">SKINNY WIRE&reg; AI COMMAND LAYER</div>
+ <div class="modal-footer-tag">ESC OR CLICK OUTSIDE TO CLOSE</div>
+ </div>
+ </div>
+</div>
+
 <div class="mc-shell">
 
+ <!-- TOP BAR -->
  <div class="topbar">
  <div class="topbar-left">
- <div class="brand">Skinny Wire<sup>&reg;</sup></div><div class="topbar-divider"></div>
+ <div class="brand">Skinny Wire<sup>&reg;</sup></div>
+ <div class="topbar-divider"></div>
  <div class="topbar-label">Mission Control</div>
  </div>
  <div class="topbar-right">
- <div class="sys-status">
- <div class="status-dot"></div>
- ALL SYSTEMS NOMINAL
- </div>
+ <div class="sys-status"><div class="status-dot"></div>ALL SYSTEMS NOMINAL</div>
  <div class="topbar-divider"></div>
  <div class="clock" id="clock">--:--:--</div>
  </div>
  </div>
 
+ <!-- LEFT PANEL -->
  <div class="left-panel">
-<div class="panel-section revenue-block">
+ <div class="panel-section revenue-block clickable" data-panel="revenue">
  <div class="section-label">// Revenue Tracker</div>
  <div class="revenue-numbers">
  <div class="revenue-current">$42K</div>
  <div class="revenue-target">/ $350K target</div>
  </div>
- <div class="progress-track">
- <div class="progress-fill" id="rev-bar"></div>
- </div>
+ <div class="progress-track"><div class="progress-fill" id="rev-bar"></div></div>
  <div class="progress-pct">12% &mdash; Year 1 Objective</div>
-</div>
+ </div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="pipeline">
  <div class="section-label">// Bid Pipeline</div>
  <div class="pipeline-item">
  <div class="pipeline-name" style="color:var(--muted);font-style:italic">No active bids</div>
- <div class="pipeline-meta">
- <span class="pipeline-value">Pipeline building</span>
+ <div class="pipeline-meta"><span class="pipeline-value">Pipeline building</span></div>
  </div>
  </div>
-</div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="projects">
  <div class="section-label">// Active Projects</div>
- <div class="stat-row">
- <span class="stat-label">In Progress</span>
- <span class="stat-value blue">0</span>
+ <div class="stat-row"><span class="stat-label">In Progress</span><span class="stat-value blue">0</span></div>
+ <div class="stat-row"><span class="stat-label">Bids Open</span><span class="stat-value orange">0</span></div>
+ <div class="stat-row"><span class="stat-label">Change Orders</span><span class="stat-value">None</span></div>
+ <div class="stat-row"><span class="stat-label">YTD Revenue</span><span class="stat-value green">$42,205</span></div>
  </div>
- <div class="stat-row">
- <span class="stat-label">Bids Open</span>
- <span class="stat-value orange">0</span>
- </div>
- <div class="stat-row">
- <span class="stat-label">Change Orders</span>
- <span class="stat-value">None</span>
- </div>
- <div class="stat-row">
- <span class="stat-label">YTD Revenue</span>
- <span class="stat-value green">$42,205</span>
- </div>
-</div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="bidqueue">
  <div class="section-label">// Bid Decision Queue</div>
  <div class="bid-decision-item">
  <div class="bid-decision-top">
  <div class="bid-decision-name" style="color:var(--muted);font-style:italic">Queue empty</div>
  </div>
- <div class="bid-decision-meta">
- <span class="bid-deadline">No open decisions</span>
+ <div class="bid-decision-meta"><span class="bid-deadline">No open decisions</span></div>
  </div>
  </div>
-</div>
-
  </div>
 
+ <!-- CENTER -->
  <div class="center-panel">
  <div class="topo-title">// Agent Command Topology</div>
-<div class="topology-wrap" id="topo-wrap">
+ <div class="topology-wrap" id="topo-wrap">
  <svg id="topo-svg" xmlns="http://www.w3.org/2000/svg"></svg>
  <div class="topo-rows">
  <div class="topo-paul-row">
  <div class="a-card paul-card" id="card-paul" data-agent="paul" data-tip="Operator — Primary Command">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Operator</div><div class="a-name">PAUL</div>
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Operator</div>
+ <div class="a-name">PAUL</div>
  <div class="a-role">Founder &amp; Owner</div>
  <div class="paul-tele"><span class="paul-tele-dot"></span>TELEGRAM CHANNEL</div>
  </div>
  </div>
  <div class="topo-naomi-row">
  <div class="a-card naomi-card" id="card-naomi" data-agent="naomi" data-tip="Primary Hub — All traffic routes through Naomi">
- <div class="naomi-pulse"></div>
- <div class="naomi-pulse"></div>
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
+ <div class="naomi-pulse"></div><div class="naomi-pulse"></div>
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
  <div class="a-tag">// Primary Hub</div>
  <div class="a-name">NAOMI</div>
  <div class="a-role">Chief of Staff</div>
  <div class="a-model">Claude Sonnet</div>
- <div class="a-status status-online">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">ONLINE</span>
- </div>
+ <div class="a-status status-online"><div class="a-status-dot"></div><span class="a-status-txt">ONLINE</span></div>
  </div>
  </div>
  <div class="topo-subs-row" id="subs-row">
- <div class="a-card sub-card" id="card-raul" data-agent="raul" data-tip="Strategic depth & executive reasoning">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Advisor</div>
- <div class="a-name">RAUL</div>
- <div class="a-role">Sr. Advisor</div>
- <div class="a-model">Opus</div>
- <div class="a-status status-idle">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">IDLE</span>
+ <div class="a-card sub-card" id="card-raul" data-agent="raul" data-tip="Strategic depth &amp; executive reasoning">
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Advisor</div><div class="a-name">RAUL</div>
+ <div class="a-role">Sr. Advisor</div><div class="a-model">Opus</div>
+ <div class="a-status status-idle"><div class="a-status-dot"></div><span class="a-status-txt">IDLE</span></div>
  </div>
+ <div class="a-card sub-card" id="card-cleo" data-agent="cleo" data-tip="Social posts &amp; content ideas">
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Content</div><div class="a-name">CLEO</div>
+ <div class="a-role">Content Dir.</div><div class="a-model">Haiku</div>
+ <div class="a-status status-idle"><div class="a-status-dot"></div><span class="a-status-txt">IDLE</span></div>
  </div>
- <div class="a-card sub-card" id="card-cleo" data-agent="cleo" data-tip="Social posts & content ideas">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Content</div>
- <div class="a-name">CLEO</div>
- <div class="a-role">Content Dir.</div>
- <div class="a-model">Haiku</div>
- <div class="a-status status-idle">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">IDLE</span>
+ <div class="a-card sub-card" id="card-rubin" data-agent="rubin" data-tip="Unconventional angles &amp; brand disruption">
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Creative</div><div class="a-name">RUBIN</div>
+ <div class="a-role">Provocateur</div><div class="a-model">Grok</div>
+ <div class="a-status status-idle"><div class="a-status-dot"></div><span class="a-status-txt">IDLE</span></div>
  </div>
+ <div class="a-card sub-card" id="card-vera" data-agent="vera" data-tip="Code research &amp; regulatory intel">
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Intel</div><div class="a-name">VERA</div>
+ <div class="a-role">Code &amp; Juris.</div><div class="a-model">&mdash;</div>
+ <div class="a-status status-idle"><div class="a-status-dot"></div><span class="a-status-txt">IDLE</span></div>
  </div>
- <div class="a-card sub-card" id="card-rubin" data-agent="rubin" data-tip="Unconventional angles & brand disruption">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Creative</div>
- <div class="a-name">RUBIN</div>
- <div class="a-role">Provocateur</div>
- <div class="a-model">Grok</div>
- <div class="a-status status-idle">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">IDLE</span>
- </div>
- </div>
- <div class="a-card sub-card" id="card-vera" data-agent="vera" data-tip="Code research & regulatory intel">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Intel</div>
- <div class="a-name">VERA</div>
- <div class="a-role">Code &amp; Juris.</div>
- <div class="a-model">&mdash;</div>
- <div class="a-status status-idle">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">IDLE</span>
- </div>
- </div>
- <div class="a-card sub-card" id="card-elliot" data-agent="elliot" data-tip="Document intelligence & plan analysis">
- <div class="c tl"></div><div class="c tr"></div>
- <div class="c bl"></div><div class="c br"></div>
- <div class="a-tag">// Docs</div>
- <div class="a-name">ELLIOT</div>
- <div class="a-role">Plan Review</div>
- <div class="a-model">&mdash;</div>
- <div class="a-status status-idle">
- <div class="a-status-dot"></div>
- <span class="a-status-txt">IDLE</span>
+ <div class="a-card sub-card" id="card-elliot" data-agent="elliot" data-tip="Document intelligence &amp; plan analysis">
+ <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+ <div class="a-tag">// Docs</div><div class="a-name">ELLIOT</div>
+ <div class="a-role">Plan Review</div><div class="a-model">&mdash;</div>
+ <div class="a-status status-idle"><div class="a-status-dot"></div><span class="a-status-txt">IDLE</span></div>
  </div>
  </div>
  </div>
  </div>
-</div>
-
-<div style="margin-top:20px;font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:0.25em;color:var(--muted2);">&mdash;&mdash; MAKING NEXT POSSIBLE&trade; &mdash;&mdash;</div>
-
+ <div style="margin-top:20px;font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:0.25em;color:var(--muted2);">&mdash;&mdash; MAKING NEXT POSSIBLE&trade; &mdash;&mdash;</div>
  </div>
 
+ <!-- RIGHT PANEL -->
  <div class="right-panel">
-<div class="panel-section agent-detail" id="agent-detail">
+ <div class="panel-section agent-detail clickable" id="agent-detail" data-panel="agentdetail">
  <div class="section-label">// Agent Detail</div>
  <div class="detail-name" id="d-name">NAOMI</div>
  <div class="detail-role" id="d-role">CHIEF OF STAFF // PRIMARY HUB</div>
- <div class="detail-row">
- <span class="detail-k">Model</span>
- <span class="detail-v blue" id="d-model">Claude Sonnet</span>
+ <div class="detail-row"><span class="detail-k">Model</span><span class="detail-v blue" id="d-model">Claude Sonnet</span></div>
+ <div class="detail-row"><span class="detail-k">Status</span><span class="detail-v green" id="d-status">ONLINE</span></div>
+ <div class="detail-row"><span class="detail-k">Channel</span><span class="detail-v" id="d-channel">Telegram</span></div>
+ <div class="detail-row"><span class="detail-k">Lane</span><span class="detail-v" id="d-lane">Ops Orchestration</span></div>
+ <div class="detail-row"><span class="detail-k">Sessions</span><span class="detail-v" id="d-sessions">Active</span></div>
  </div>
- <div class="detail-row">
- <span class="detail-k">Status</span>
- <span class="detail-v green" id="d-status">ONLINE</span>
- </div>
- <div class="detail-row">
- <span class="detail-k">Channel</span>
- <span class="detail-v" id="d-channel">Telegram</span>
- </div>
- <div class="detail-row">
- <span class="detail-k">Lane</span>
- <span class="detail-v" id="d-lane">Ops Orchestration</span>
- </div>
- <div class="detail-row">
- <span class="detail-k">Sessions</span>
- <span class="detail-v" id="d-sessions">&mdash;</span>
- </div>
-</div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="activityfeed">
  <div class="section-label">// Activity Feed</div>
- <div class="feed-item">
- <div class="feed-agent">NAOMI</div>
- <div class="feed-text">Stack initialized — all docs ingested</div>
- <div class="feed-time">07:30</div>
+ <div class="feed-item"><div class="feed-agent">NAOMI</div><div class="feed-text">Stack initialized &mdash; all docs ingested</div><div class="feed-time">07:30</div></div>
+ <div class="feed-item"><div class="feed-agent">NAOMI</div><div class="feed-text">Mission Control live on GitHub Pages</div><div class="feed-time">07:27</div></div>
+ <div class="feed-item"><div class="feed-agent">NAOMI</div><div class="feed-text">NAS connected &mdash; inbox docs reviewed</div><div class="feed-time">16:25</div></div>
+ <div class="feed-item"><div class="feed-agent">NAOMI</div><div class="feed-text">Revenue tracker updated &mdash; $42,205 YTD</div><div class="feed-time">17:13</div></div>
  </div>
- <div class="feed-item">
- <div class="feed-agent">NAOMI</div>
- <div class="feed-text">Mission Control live on GitHub Pages</div>
- <div class="feed-time">07:27</div>
- </div>
- <div class="feed-item">
- <div class="feed-agent">NAOMI</div>
- <div class="feed-text">NAS connected — inbox docs reviewed</div>
- <div class="feed-time">16:25</div>
- </div>
- <div class="feed-item">
- <div class="feed-agent">NAOMI</div>
- <div class="feed-text">Revenue tracker updated — $42,205 YTD</div>
- <div class="feed-time">17:13</div>
- </div>
-</div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="needspaul">
  <div class="section-label">// Needs Paul</div>
- <div class="action-item">
- <div class="action-dot orange"></div>
- <div class="action-text">Pay Trademark Engine — logo mark filing</div>
+ <div class="action-item"><div class="action-dot orange"></div><div class="action-text">Pay Trademark Engine &mdash; logo mark filing</div></div>
+ <div class="action-item"><div class="action-dot orange"></div><div class="action-text">Finish contact form &mdash; route to Naomi</div></div>
+ <div class="action-item"><div class="action-dot orange"></div><div class="action-text">Shared mailbox delegation &mdash; info@ and connect@</div></div>
+ <div class="action-item"><div class="action-dot blue"></div><div class="action-text">Review SEO strategy doc before execution</div></div>
+ <div class="action-item"><div class="action-dot blue"></div><div class="action-text">File X @skinnywire trademark claim</div></div>
+ <div class="action-item"><div class="action-dot blue"></div><div class="action-text">Router VLAN policy audit</div></div>
+ <div class="action-item"><div class="action-dot blue"></div><div class="action-text">Fiber epoxy/polish training &mdash; identify provider</div></div>
+ <div class="action-item"><div class="action-dot blue"></div><div class="action-text">Skinny Wire Pathway Specs exhibit doc</div></div>
  </div>
- <div class="action-item">
- <div class="action-dot orange"></div>
- <div class="action-text">Finish contact form — route to Naomi</div>
- </div>
- <div class="action-item">
- <div class="action-dot orange"></div>
- <div class="action-text">Shared mailbox delegation — info@ and connect@</div>
- </div>
- <div class="action-item">
- <div class="action-dot blue"></div>
- <div class="action-text">Review SEO strategy doc before execution</div>
- </div>
- <div class="action-item">
- <div class="action-dot blue"></div>
- <div class="action-text">File X @skinnywire trademark claim</div>
- </div>
- <div class="action-item">
- <div class="action-dot blue"></div>
- <div class="action-text">Router VLAN policy audit</div>
- </div>
- <div class="action-item">
- <div class="action-dot blue"></div>
- <div class="action-text">Fiber epoxy/polish training — identify provider</div>
- </div>
- <div class="action-item">
- <div class="action-dot blue"></div>
- <div class="action-text">Skinny Wire Pathway Specs exhibit doc</div>
- </div>
-</div>
 
-<div class="panel-section">
+ <div class="panel-section clickable" data-panel="hoursvbid">
  <div class="section-label">// Hours vs. Bid</div>
  <div class="hvb-item">
  <div class="hvb-name">Centennial Office Park</div>
  <div class="hvb-bars">
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">BID</div>
- <div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div>
- <div class="hvb-bar-val">12d</div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">BID</div><div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div><div class="hvb-bar-val">12d</div></div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">ACT</div><div class="hvb-track"><div class="hvb-fill actual-fill" style="width:0%" data-w="75%"></div></div><div class="hvb-bar-val">9d</div></div>
  </div>
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">ACT</div>
- <div class="hvb-track"><div class="hvb-fill actual-fill" style="width:0%" data-w="75%"></div></div>
- <div class="hvb-bar-val">9d</div>
- </div>
- </div>
- <div class="hvb-delta under">&darr; 3 days under — on track</div>
+ <div class="hvb-delta under">&darr; 3 days under &mdash; on track</div>
  </div>
  <div class="hvb-item">
  <div class="hvb-name">DPS Admin Building</div>
  <div class="hvb-bars">
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">BID</div>
- <div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div>
- <div class="hvb-bar-val">8d</div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">BID</div><div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div><div class="hvb-bar-val">8d</div></div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">ACT</div><div class="hvb-track"><div class="hvb-fill actual-over" style="width:0%" data-w="112%"></div></div><div class="hvb-bar-val">9d</div></div>
  </div>
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">ACT</div>
- <div class="hvb-track"><div class="hvb-fill actual-over" style="width:0%" data-w="112%"></div></div>
- <div class="hvb-bar-val">9d</div>
- </div></div>
- <div class="hvb-delta over">&uarr; 1 day over — monitor</div>
+ <div class="hvb-delta over">&uarr; 1 day over &mdash; monitor</div>
  </div>
  <div class="hvb-item">
  <div class="hvb-name">Aurora Medical Campus</div>
  <div class="hvb-bars">
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">BID</div>
- <div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div>
- <div class="hvb-bar-val">22d</div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">BID</div><div class="hvb-track"><div class="hvb-fill bid-fill" style="width:0%" data-w="100%"></div></div><div class="hvb-bar-val">22d</div></div>
+ <div class="hvb-bar-row"><div class="hvb-bar-label">ACT</div><div class="hvb-track"><div class="hvb-fill actual-fill" style="width:0%" data-w="32%"></div></div><div class="hvb-bar-val">7d</div></div>
  </div>
- <div class="hvb-bar-row">
- <div class="hvb-bar-label">ACT</div>
- <div class="hvb-track"><div class="hvb-fill actual-fill" style="width:0%" data-w="32%"></div></div>
- <div class="hvb-bar-val">7d</div>
+ <div class="hvb-delta under">&darr; In progress &mdash; 32% complete</div>
  </div>
  </div>
- <div class="hvb-delta under">&darr; In progress — 32% complete</div>
- </div>
-</div>
-
  </div>
 
 </div>
 
 <script>
+// ─── CLOCK ───
 function updateClock() {
  const now = new Date();
- document.getElementById('clock').textContent =
- now.toLocaleTimeString('en-US', { hour12: false });
+ document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { hour12: false });
 }
 updateClock();
 setInterval(updateClock, 1000);
 
-setTimeout(() => {
- document.getElementById('rev-bar').style.width = '12%';
-}, 400);
+// ─── BARS ───
+setTimeout(() => { document.getElementById('rev-bar').style.width = '12%'; }, 400);
+setTimeout(() => { document.querySelectorAll('.hvb-fill').forEach(el => { el.style.width = el.dataset.w; }); }, 600);
 
-setTimeout(() => {
- document.querySelectorAll('.hvb-fill').forEach(el => {
- el.style.width = el.dataset.w;
- });
-}, 600);
-
-function cx(el, wrap) {
- const er = el.getBoundingClientRect();
- const wr = wrap.getBoundingClientRect();
- return er.left - wr.left + er.width / 2;
-}
-function cy(el, wrap) {
- const er = el.getBoundingClientRect();
- const wr = wrap.getBoundingClientRect();
- return er.top - wr.top + er.height / 2;
-}
-function top_y(el, wrap) {
- const er = el.getBoundingClientRect();
- const wr = wrap.getBoundingClientRect();
- return er.top - wr.top;
-}
-function bot(el, wrap) {
- const er = el.getBoundingClientRect();
- const wr = wrap.getBoundingClientRect();
- return er.top - wr.top + er.height;
-}
+// ─── TOPOLOGY LINES ───
+function cx(el, w) { const e=el.getBoundingClientRect(),r=w.getBoundingClientRect(); return e.left-r.left+e.width/2; }
+function top_y(el,w){ const e=el.getBoundingClientRect(),r=w.getBoundingClientRect(); return e.top-r.top; }
+function bot(el,w) { const e=el.getBoundingClientRect(),r=w.getBoundingClientRect(); return e.top-r.top+e.height; }
 
 function drawTopology() {
  const svg = document.getElementById('topo-svg');
  svg.innerHTML = '';
  const wrap = document.getElementById('topo-wrap');
-
  const paul = document.getElementById('card-paul');
  const naomi = document.getElementById('card-naomi');
  const subs = ['card-raul','card-cleo','card-rubin','card-vera','card-elliot'];
 
- function line(d, color, w, delay, dash) {
+ function line(d, color, w, delay) {
  const len = 400;
- const g = document.createElementNS('http://www.w3.org/2000/svg','path');
- g.setAttribute('d', d);
- g.setAttribute('stroke', color);
- g.setAttribute('stroke-width', w * 4);
- g.setAttribute('fill', 'none');
- g.setAttribute('opacity', '0.06');
- g.style.cssText = `stroke-dasharray:${len};stroke-dashoffset:${len};animation:drawLine 0.7s ${delay}s ease forwards`;
- svg.appendChild(g);
+ [['0.06', w*4], ['0.6', w]].forEach(([op, sw]) => {
  const p = document.createElementNS('http://www.w3.org/2000/svg','path');
- p.setAttribute('d', d);
- p.setAttribute('stroke', color);
- p.setAttribute('stroke-width', w);
- p.setAttribute('fill', 'none');
- p.setAttribute('opacity', '0.6');
- if (dash) p.setAttribute('stroke-dasharray', dash);
- p.style.cssText = `stroke-dasharray:${len};stroke-dashoffset:${len};animation:drawLine 0.7s ${delay}s ease forwards`;
+ p.setAttribute('d',d); p.setAttribute('stroke',color); p.setAttribute('stroke-width',sw);
+ p.setAttribute('fill','none'); p.setAttribute('opacity',op);
+ p.style.cssText=`stroke-dasharray:${len};stroke-dashoffset:${len};animation:drawLine 0.7s ${delay}s ease forwards`;
  svg.appendChild(p);
+ });
  }
 
- const px = cx(paul, wrap), py = bot(paul, wrap);
- const nx = cx(naomi, wrap), ny = top_y(naomi, wrap);
- const my = py + (ny - py) / 2;
- line(`M ${px} ${py} C ${px} ${my}, ${nx} ${my}, ${nx} ${ny}`, '#ff7b00', 1.5, 0.1);
-
- subs.forEach((id, i) => {
- const sub = document.getElementById(id);
- if (!sub) return;
- const sx = cx(sub, wrap), sy = top_y(sub, wrap);
- const nbx = cx(naomi, wrap), nby = bot(naomi, wrap);
- const cmy = nby + (sy - nby) * 0.5;
- line(`M ${nbx} ${nby} C ${nbx} ${cmy}, ${sx} ${cmy}, ${sx} ${sy}`, '#00BFFF', 1, 0.2 + i * 0.07);
+ const px=cx(paul,wrap), py=bot(paul,wrap), nx=cx(naomi,wrap), ny=top_y(naomi,wrap);
+ line(`M ${px} ${py} C ${px} ${py+(ny-py)/2}, ${nx} ${py+(ny-py)/2}, ${nx} ${ny}`,'#ff7b00',1.5,0.1);
+ subs.forEach((id,i) => {
+ const s=document.getElementById(id); if(!s) return;
+ const sx=cx(s,wrap),sy=top_y(s,wrap),nbx=cx(naomi,wrap),nby=bot(naomi,wrap),cmy=nby+(sy-nby)*0.5;
+ line(`M ${nbx} ${nby} C ${nbx} ${cmy}, ${sx} ${cmy}, ${sx} ${sy}`,'#00BFFF',1,0.2+i*0.07);
  });
 }
-
 window.addEventListener('load', () => setTimeout(drawTopology, 150));
 window.addEventListener('resize', () => setTimeout(drawTopology, 80));
 
+// ─── AGENT DATA ───
 const agentData = {
- paul: {name: 'PAUL', role: 'FOUNDER & OWNER // OPERATOR',
- model: 'Human', status: 'ACTIVE', statusClass: 'green',
- channel: 'Telegram', lane: 'Command Authority', sessions: '\u2014'
- },
- naomi: {
- name: 'NAOMI', role: 'CHIEF OF STAFF // PRIMARY HUB',
- model: 'Claude Sonnet', status: 'ONLINE', statusClass: 'green',
- channel: 'Telegram', lane: 'Ops Orchestration', sessions: 'Active'
- },
- raul: {
- name: 'RAUL', role: 'SENIOR ADVISOR',
- model: 'Claude Opus', status: 'IDLE', statusClass: '',
- channel: 'Via Naomi', lane: 'Strategy & Growth', sessions: 'Weekly cadence'
- },
- cleo: {
- name: 'CLEO', role: 'CONTENT DIRECTOR',
- model: 'Claude Haiku', status: 'IDLE', statusClass: '',
- channel: 'Via Naomi', lane: 'Social & Content', sessions: '3 queued'
- },
- rubin: {
- name: 'RUBIN', role: 'CREATIVE PROVOCATEUR',
- model: 'Grok', status: 'IDLE', statusClass: '',
- channel: 'Via Naomi', lane: 'Brand Disruption', sessions: '\u2014'
- },
- vera: {
- name: 'VERA', role: 'CODE & JURISDICTION INTEL',
- model: '\u2014', status: 'IDLE', statusClass: '',
- channel: 'Via Naomi', lane: 'Technical & Regulatory', sessions: '1 completed'
- },
- elliot: {
- name: 'ELLIOT', role: 'PLAN REVIEW & DOC INTEL',
- model: '\u2014', status: 'IDLE', statusClass: '',
- channel: 'Via Naomi', lane: 'Document Analysis', sessions: 'Aurora flagged'
- }
+ paul: { tag:'// Operator', name:'PAUL', nameClass:'orange', role:'FOUNDER & OWNER // OPERATOR', model:'Human', statusKey:'active', channel:'Telegram', lane:'Command Authority', sessions:'—', notes:'Primary command authority. All agent actions are ultimately in service of Paul\'s objectives for Skinny Wire.' },
+ naomi: { tag:'// Primary Hub', name:'NAOMI', nameClass:'', role:'CHIEF OF STAFF // PRIMARY HUB', model:'Claude Sonnet', statusKey:'online', channel:'Telegram', lane:'Ops Orchestration', sessions:'Active', notes:'Single operational touchpoint. Routes all tasks, manages context, and coordinates sub-agents. Maintains Mission Control.' },
+ raul: { tag:'// Advisor', name:'RAUL', nameClass:'', role:'SENIOR ADVISOR', model:'Claude Opus', statusKey:'idle', channel:'Via Naomi', lane:'Strategy & Growth', sessions:'Weekly cadence', notes:'Named after economist Ra\xfal Prebisch. Owns field hours analysis and growth strategy. Weekly sessions with Naomi on the $350K revenue directive.' },
+ cleo: { tag:'// Content', name:'CLEO', nameClass:'', role:'CONTENT DIRECTOR', model:'Claude Haiku', statusKey:'idle', channel:'Via Naomi', lane:'Social & Content', sessions:'3 queued', notes:'Handles social media posts, content ideas, and brand voice execution. Output reviewed by Paul before publishing.' },
+ rubin: { tag:'// Creative', name:'RUBIN', nameClass:'', role:'CREATIVE PROVOCATEUR', model:'Grok', statusKey:'idle', channel:'Via Naomi', lane:'Brand Disruption', sessions:'—', notes:'Switched from GPT-4o. Output always delivered raw and unfiltered. Unconventional angles and brand disruption are the mandate.' },
+ vera: { tag:'// Intel', name:'VERA', nameClass:'', role:'CODE & JURISDICTION INTEL', model:'—', statusKey:'idle', channel:'Via Naomi', lane:'Technical & Regulatory', sessions:'1 completed', notes:'Feeds directly into Paul\'s plan sets. Maintains jurisdictional database — AHJ, adopted codes, permit requirements by municipality.' },
+ elliot: { tag:'// Documents', name:'ELLIOT', nameClass:'', role:'PLAN REVIEW & DOC INTEL', model:'—', statusKey:'idle', channel:'Via Naomi', lane:'Document Analysis', sessions:'Aurora flagged', notes:'Reads PDFs, bid docs, specs, and Excel construction timelines. Currently has 3 flagged items from the Aurora Medical Campus plan set.' },
 };
 
+const statusConfig = {
+ online: { cls:'online', txt:'ONLINE' },
+ idle: { cls:'idle', txt:'IDLE' },
+ active: { cls:'active', txt:'ACTIVE' },
+};
+
+// ─── AGENT MODAL ───
+const backdrop = document.getElementById('agent-modal');
+
+function openModal(key) {
+ const d = agentData[key];
+ if (!d) return;
+ document.getElementById('m-tag').textContent = d.tag;
+ document.getElementById('m-name').textContent = d.name;
+ document.getElementById('m-name').className = 'modal-name' + (d.nameClass ? ' '+d.nameClass : '');
+ document.getElementById('m-role').textContent = d.role;
+ document.getElementById('m-model').textContent = d.model;
+ document.getElementById('m-channel').textContent = d.channel;
+ document.getElementById('m-lane').textContent = d.lane;
+ document.getElementById('m-sessions').textContent = d.sessions;
+ document.getElementById('m-notes').textContent = d.notes;
+ const sc = statusConfig[d.statusKey] || statusConfig.idle;
+ const badge = document.getElementById('m-status-badge');
+ badge.className = 'modal-status-badge ' + sc.cls;
+ document.getElementById('m-status-txt').textContent = sc.txt;
+ backdrop.classList.add('open');
+ document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+ backdrop.classList.remove('open');
+ document.body.style.overflow = '';
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+
+// ─── PANEL MODAL DATA ───
+const panelData = {
+ revenue: {
+ tag: '// Left Panel', name: 'REVENUE TRACKER', subtitle: 'YEAR 1 OBJECTIVE — $350,000',
+ fields: [
+ { label: 'YTD Invoiced', value: '$42,205', cls: 'blue' },
+ { label: 'Target', value: '$350,000', cls: '' },
+ { label: 'Gap to Target', value: '$307,795', cls: 'orange' },
+ { label: 'Progress', value: '12%', cls: 'accent' },
+ { label: 'Pace Required', value: '~$27K/mo remaining', cls: '' },
+ { label: 'Notes', value: 'Naomi updates when Paul confirms invoice sent or payment received via Telegram. Year 1 target drives all bid and margin decisions.', cls: 'muted', full: true },
+ ]
+ },
+ pipeline: {
+ tag: '// Left Panel', name: 'BID PIPELINE', subtitle: 'ACTIVE BID TRACKING',
+ fields: [
+ { label: 'Active Bids', value: '0', cls: 'muted' },
+ { label: 'Pipeline Status', value: 'Building', cls: 'orange' },
+ { label: 'Notes', value: 'Naomi populates from every bid received. Status tags: IN REVIEW, SUBMITTED, AWARDED, LOST. Value updated when scope confirmed by bid documents.', cls: 'muted', full: true },
+ ]
+ },
+ projects: {
+ tag: '// Left Panel', name: 'ACTIVE PROJECTS', subtitle: 'PROJECT & MARGIN SUMMARY',
+ fields: [
+ { label: 'In Progress', value: '0', cls: 'blue' },
+ { label: 'Bids Open', value: '0', cls: 'orange' },
+ { label: 'Change Orders', value: 'None', cls: '' },
+ { label: 'YTD Revenue', value: '$42,205', cls: 'green' },
+ { label: 'Notes', value: 'Skinny Wire self-performs all work across Build, Manage, and Staff. No subcontractors on core scope. Every project tracked here feeds Hours vs. Bid.', cls: 'muted', full: true },
+ ]
+ },
+ bidqueue: {
+ tag: '// Left Panel', name: 'BID DECISION QUEUE', subtitle: 'PURSUE / PASS DECISIONS',
+ fields: [
+ { label: 'Open Decisions', value: '0', cls: 'muted' },
+ { label: 'Urgency Trigger', value: '5 days to deadline', cls: 'orange' },
+ { label: 'Notes', value: 'Highest-priority panel. Every hour a bid decision sits undecided is margin at risk. Naomi sets recommendation. Paul decides via Telegram.', cls: 'muted', full: true },
+ ]
+ },
+ agentdetail: {
+ tag: '// Right Panel', name: 'AGENT DETAIL', subtitle: 'CLICK ANY AGENT CARD',
+ fields: [
+ { label: 'Instructions', value: 'Click any agent card in the topology to view full agent details in this expanded panel.', cls: 'muted', full: true },
+ ]
+ },
+ activityfeed: {
+ tag: '// Right Panel', name: 'ACTIVITY FEED', subtitle: 'AGENT ACTION LOG',
+ fields: [
+ { label: 'Last Entry', value: 'Revenue tracker updated', cls: '' },
+ { label: 'Notes', value: 'Naomi writes a feed entry after every significant action. Format: Agent — action — timestamp. Max 8 entries visible. Older entries scroll out.', cls: 'muted', full: true },
+ ]
+ },
+ needspaul: {
+ tag: '// Right Panel', name: 'NEEDS PAUL', subtitle: 'OPEN DECISIONS & ACTIONS',
+ fields: [
+ { label: 'Orange items', value: 'Urgent — deadline or time-sensitive', cls: 'orange' },
+ { label: 'Blue items', value: 'Standard — no immediate deadline', cls: 'blue' },
+ { label: 'Escalation rule', value: 'Items outstanding 48+ hours auto-escalate to urgent', cls: '' },
+ { label: 'Notes', value: 'Naomi adds items when a decision is identified. Items clear when Paul responds via Telegram.', cls: 'muted', full: true },
+ ]
+ },
+ hoursvbid: {
+ tag: '// Right Panel', name: 'HOURS VS. BID', subtitle: 'MARGIN MONITORING',
+ fields: [
+ { label: 'Alert threshold', value: '10% over bid triggers Needs Paul flag', cls: 'orange' },
+ { label: 'Data source', value: 'Paul\'s field logs via Telegram', cls: '' },
+ { label: 'Notes', value: 'Primary margin monitoring tool. Bid days from original estimate at award. Actual days from Field Log entries. Green = under budget. Red = over. Data compounds with every project.', cls: 'muted', full: true },
+ ]
+ },
+};
+
+const panelBackdrop = document.getElementById('panel-modal');
+
+function openPanelModal(key) {
+ const d = panelData[key];
+ if (!d) return;
+ document.getElementById('pm-tag').textContent = d.tag;
+ document.getElementById('pm-name').textContent = d.name;
+ document.getElementById('pm-subtitle').textContent = d.subtitle || '';
+ const body = document.getElementById('pm-body');
+ body.innerHTML = '';
+ d.fields.forEach(f => {
+ const div = document.createElement('div');
+ div.className = 'modal-field' + (f.full ? ' full-width' : '');
+ const lbl = document.createElement('div');
+ lbl.className = 'modal-field-label';
+ lbl.textContent = f.label;
+ const val = document.createElement('div');
+ val.className = 'modal-field-value' + (f.cls ? ' '+f.cls : '');
+ val.textContent = f.value;
+ div.appendChild(lbl);
+ div.appendChild(val);
+ body.appendChild(div);
+ });
+ panelBackdrop.classList.add('open');
+ document.body.style.overflow = 'hidden';
+}
+
+function closePanelModal() {
+ panelBackdrop.classList.remove('open');
+ document.body.style.overflow = '';
+}
+
+document.getElementById('panel-modal-close').addEventListener('click', closePanelModal);
+panelBackdrop.addEventListener('click', e => { if (e.target === panelBackdrop) closePanelModal(); });
+
+document.addEventListener('keydown', e => {
+ if (e.key === 'Escape') { closeModal(); closePanelModal(); }
+});
+
+// ─── CLICK HANDLERS ───
 document.querySelectorAll('.a-card').forEach(card => {
  card.addEventListener('click', () => {
  const key = card.dataset.agent;
  const d = agentData[key];
  if (!d) return;
+ // update side panel
  document.getElementById('d-name').textContent = d.name;
  document.getElementById('d-role').textContent = d.role;
  document.getElementById('d-model').textContent = d.model;
  const statusEl = document.getElementById('d-status');
- statusEl.textContent = d.status;
- statusEl.className = 'detail-v ' + (d.statusClass || 'detail-v');
+ const sc = statusConfig[d.statusKey] || statusConfig.idle;
+ statusEl.textContent = sc.txt;
+ statusEl.className = 'detail-v ' + (d.statusKey === 'online' ? 'green' : d.statusKey === 'active' ? 'orange' : '');
  document.getElementById('d-channel').textContent = d.channel;
  document.getElementById('d-lane').textContent = d.lane;
  document.getElementById('d-sessions').textContent = d.sessions;
+ // open modal
+ openModal(key);
+ });
+});
+
+document.querySelectorAll('.panel-section.clickable').forEach(section => {
+ section.addEventListener('click', () => {
+ const key = section.dataset.panel;
+ if (key) openPanelModal(key);
  });
 });
 </script>
-
 </body>
 </html>
